@@ -1,0 +1,96 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+
+@import "normalize";
+@import "fonts";
+@import "./variables";
+
+body {
+  font-family: 'Ubuntu';
+  color: $main-color;
+}
+
+.todo-list-main {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: $header-size;
+  margin-top: $header-top;
+  margin-bottom: $header-button;
+}
+
+p {
+  font-size: $p-size;
+  margin-top: $p-top;
+  margin-bottom: $p-button;
+}
+
+input {
+  width: $input-width;
+  height: $input-height;
+  border: 2px solid $main-color;
+  border-radius: 25px;
+}
+
+button {
+  width: $btn-width;
+  height: $btn-height;
+  background: $color-base;
+  font-size: $btn-size;
+  border: 2px solid $main-color;
+  border-radius: 25px;
+}
+
+.add-task__main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.add-task__btn {
+  width: $input-width;
+  margin: 20px auto;
+}
+
+.add-task__input {
+  margin: 0 auto;
+}
+
+.todo-list__empty p {
+  font-family: 'Ubuntu-Ligth';
+  color: $main-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: $p-size;
+}
+
+.todo-list-item, .todo-unfinished, .v-todo-completed {
+  width: 450px;
+  min-height: 150px;
+  margin: 0 auto;
+  background: $color-grey;
+  border-radius: 25px;
+}
+
+.todo-list-item p, .todo-unfinished p, .v-todo-completed p {
+  padding-top: 20px;
+}
+
+.todo-list-item__btns, .todo-unfinished__btns  {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.todo-list__unfinished-tasks, .todo-list__compeleted-tasks {
+  position: absolute;
+}
+
+.todo-list__compeleted-tasks {
+  right: 0px;
+}
