@@ -3,13 +3,15 @@
     <div class="add-task">
       <h1>План дел на ближайшее время (Todo List)</h1>
       <div class="add-task__main">
+        <p class="add-task__paragraph">Введите задачу:</p>
         <input
-            placeholder="Введите задачу"
+            placeholder="Поле для ввода задачи"
             type="text"
             v-model="valueInput"
             @keydown.enter="addPostToTodoList"
             class="add-task__input"
         >
+        <p class="add-task__paragraph">Введите дату: </p>
         <input 
           type="date"
           class="add-task__input"

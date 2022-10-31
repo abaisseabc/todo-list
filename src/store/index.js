@@ -40,18 +40,14 @@ export default createStore({
       state.completed_tasks.push(task);
       window.localStorage.setItem('task', JSON.stringify(state.completed_tasks));
 
-
       let filteredUnfinishedTasks = state.unfinished_tasks.filter(item => {return item.id != task.id});
       state.unfinished_tasks = filteredUnfinishedTasks;
       window.localStorage.setItem('untask', JSON.stringify(state.unfinished_tasks));
     },
     ADD_UNFINISHED_TASK_TO_ARRAY_UNFINISHED_TASKS: (state, unTask) => {
-
       let filterPosts = state.posts.filter(item => {return item.id != unTask.id});
       state.posts = filterPosts;
-
       window.localStorage.setItem('post', JSON.stringify(state.posts));
-
 
       state.unfinished_tasks.push(unTask);
       window.localStorage.setItem('untask', JSON.stringify(state.unfinished_tasks));

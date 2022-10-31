@@ -42,6 +42,10 @@ input {
   border-radius: 25px;
 }
 
+input:focus {
+  border: 2px solid $color-grey;
+}
+
 button {
   width: $btn-width;
   height: $btn-height;
@@ -49,6 +53,10 @@ button {
   font-size: $btn-size;
   border: 2px solid $main-color;
   border-radius: 25px;
+}
+
+button:hover {
+  background: $color-grey;
 }
 
 .todo-list-main {
@@ -60,6 +68,10 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.add-task__paragraph {
+  font-size: 25px;
 }
 
 .add-task__btn {
