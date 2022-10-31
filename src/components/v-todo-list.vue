@@ -30,7 +30,7 @@
     </div>
 
     <div class="todo-list__unfinished-tasks" v-if="UNFINISHED_TASKS.length > 0">
-        <h1>Не выполненные задачи: {{UNFINISHED_TASKS.length}}</h1>
+        <h1>Невыполненные задачи: {{UNFINISHED_TASKS.length}}</h1>
         <vTodoUnfinishedVue 
             v-for="(unTask, index) in UNFINISHED_TASKS"
             :key="unTask.id"
