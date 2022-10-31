@@ -9,9 +9,10 @@
 
     <vTodoListItemVue 
         class="todo-list__normal"
-        v-for="post in POSTS"
+        v-for="(post, index) in POSTS"
         :key="post.id"
         :data_post="post"
+        :index="index + 1"
         @deletePost="deletePost(post)"
         @completeTask="completeTask(post)"
         @unfinishedTask="unfinishedTask(post)"
@@ -20,9 +21,10 @@
     <div class="todo-list__compeleted-tasks" v-if="COMPLETED_TASKS.length > 0">
         <h1>Выполенные задачи: {{COMPLETED_TASKS.length}}</h1>
         <vTodoCompletedVue 
-            v-for="task in COMPLETED_TASKS"
+            v-for="(task, index) in COMPLETED_TASKS"
             :key="task.id"
             :data_task="task"
+            :index="index + 1"
             @deletePost="deleteTask(task)"
         />
     </div>
@@ -30,9 +32,10 @@
     <div class="todo-list__unfinished-tasks" v-if="UNFINISHED_TASKS.length > 0">
         <h1>Не выполненные задачи: {{UNFINISHED_TASKS.length}}</h1>
         <vTodoUnfinishedVue 
-            v-for="unTask in UNFINISHED_TASKS"
+            v-for="(unTask, index) in UNFINISHED_TASKS"
             :key="unTask.id"
             :data_untask="unTask"
+            :index="index + 1"
             @deletePost="deleteUntask(unTask)"
             @completeTask="completeTask(unTask)"
         />

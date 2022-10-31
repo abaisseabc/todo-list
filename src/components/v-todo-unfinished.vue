@@ -1,6 +1,6 @@
 <template>
   <div class="todo-unfinished">
-    <p>{{data_untask.post}}</p>
+    <p>{{index}}. {{data_untask.post}}</p>
     <p class="date_paragraph">{{data_untask.date}}</p>
     <div class="todo-unfinished__btns">
       <vDoneBtnVue
@@ -22,6 +22,9 @@ export default {
     props: {
         data_untask: {
             type: Object
+        },
+        index: {
+            type: Number
         }
     },
     methods: {

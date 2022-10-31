@@ -1,6 +1,6 @@
 <template>
   <div class="todo-list-item">
-    <p>{{data_post.post}}</p>
+    <p>{{index}}. {{data_post.post}}</p>
     <p class="date_paragraph">{{data_post.date}}</p>
     <div class="todo-list-item__btns">
       <vDeleteVue
@@ -23,6 +23,9 @@ export default {
     props: {
         data_post: {
             type: Object
+        },
+        index: {
+            type: Number,
         }
     },
     methods: {
@@ -34,7 +37,7 @@ export default {
         },
         unfinishedTask() {
             this.$emit('unfinishedTask')
-        }
+        },
     }
 }
 </script>

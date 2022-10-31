@@ -1,6 +1,6 @@
 <template>
   <div class="v-todo-completed">
-    <p>{{data_task.post}}</p>
+    <p>{{index}}. {{data_task.post}}</p>
     <p class="date_paragraph">{{data_task.date}}</p>
     <div class="v-todo-completed__btns">
       <vDeleteVue 
@@ -18,6 +18,9 @@ export default {
   props: {
     data_task: {
       type: Object
+    },
+    index: {
+      type: Number
     }
   },
   methods: {
