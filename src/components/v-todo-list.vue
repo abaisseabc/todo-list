@@ -60,7 +60,7 @@ export default {
             'POSTS',
             'COMPLETED_TASKS',
             'UNFINISHED_TASKS'
-        ])
+        ]),
     },
     methods: {
         ...mapActions([
@@ -86,11 +86,6 @@ export default {
             this.COMPLETE_TASKS(task);
         },
     },
-    mounted() {
-        if (localStorage.getItem(this.POSTS)) {
-            this.POSTS = JSON.parse(localStorage.getItem(this.POSTS));
-        }
-    }
 }
 </script>
 

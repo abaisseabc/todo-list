@@ -1,9 +1,12 @@
 <template>
   <div class="v-todo-completed">
     <p>{{data_task.post}}</p>
-    <vDeleteVue 
-      @deletePost="deletePost"
-    />
+    <p class="date_paragraph">{{data_task.date}}</p>
+    <div class="v-todo-completed__btns">
+      <vDeleteVue 
+        @deletePost="deletePost"
+      />
+    </div>
   </div>
 </template>
 

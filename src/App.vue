@@ -10,6 +10,11 @@
             @keydown.enter="addPostToTodoList"
             class="add-task__input"
         >
+        <input 
+          type="date"
+          class="add-task__input"
+          v-model="dateInput"
+        >
         <button
             class="add-task__btn"
             @click="addPostToTodoList"
@@ -30,7 +35,8 @@ export default {
   components: {vTodoListVue},
   data() {
     return {
-      valueInput: ''
+      valueInput: '',
+      dateInput: ''
     }
   },
   methods: {
@@ -38,23 +44,26 @@ export default {
       'GET_POST_FROM_USER'
     ]),
     addPostToTodoList() {
-      if (this.valueInput !== '') {
+      if (this.valueInput !== '' && this.dateInput !== '') {
+        let date = new Date();
+        date = date.toISOString().split('T')[0];
 
-        const objPost = {
-          id: Date.now(),
-          post: this.valueInput
+        if (this.dateInput >= date) {
+          const objPost = {
+            id: Date.now(),
+            post: this.valueInput,
+            date: this.dateInput
+          }
+
+          this.GET_POST_FROM_USER(objPost);
         }
-
-        this.GET_POST_FROM_USER(objPost);
       }
-      this.valueInput = ''
+      this.valueInput = '',
+      this.dateInput = ''
     }
   }
 }
 </script>
 
 <style lang="scss">
-.todo-list-main {
-  text-align: center;
-}
 </style>

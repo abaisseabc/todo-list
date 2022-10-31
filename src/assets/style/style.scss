@@ -17,6 +17,12 @@ body {
   margin: 0 auto;
 }
 
+.date_paragraph {
+  padding-top: 0px;
+  font-family: 'Ubuntu-Ligth';
+  font-size: 20px;
+}
+
 h1 {
   font-size: $header-size;
   margin-top: $header-top;
@@ -45,6 +51,10 @@ button {
   border-radius: 25px;
 }
 
+.todo-list-main {
+  text-align: center;
+}
+
 .add-task__main {
   text-align: center;
   display: flex;
@@ -59,6 +69,7 @@ button {
 
 .add-task__input {
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .todo-list__empty p {
@@ -81,7 +92,7 @@ button {
   padding-top: 20px;
 }
 
-.todo-list-item__btns, .todo-unfinished__btns  {
+.todo-list-item__btns, .todo-unfinished__btns, .v-todo-completed__btns {
   display: flex;
   justify-content: space-around;
   padding-bottom: 20px;
@@ -93,4 +104,100 @@ button {
 
 .todo-list__compeleted-tasks {
   right: 0px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .todo-list-main {
+    width: 320px;
+    margin: 0 auto;
+  }
+  input {
+    width: 300px;
+  }
+  button {
+    width: 300px;
+  }
+  .add-task__btn {
+    width: 300px;
+  }
+  .todo-list__normal {
+    width: 300px;
+  }
+  .todo-list-item__btns button {
+    width: 95px;
+  }
+  .todo-list__compeleted-tasks, .todo-list__unfinished-tasks {
+    position: static;
+    display: block;
+  }
+  .v-todo-completed, .todo-unfinished {
+    width: 300px;
+  }
+  .v-todo-completed button, .todo-unfinished__btns button {
+    width: 95px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .todo-list-main {
+    width: 480px;
+    margin: 0 auto;
+  }
+  input {
+    width: 440px;
+  }
+  button {
+    width: 440px;
+  }
+  .add-task__btn {
+    width: 440px;
+  }
+  .todo-list__normal {
+    width: 440px;
+  }
+  .todo-list-item__btns button {
+    width: 95px;
+  }
+  .todo-list__compeleted-tasks, .todo-list__unfinished-tasks {
+    position: static;
+    display: block;
+  }
+  .v-todo-completed, .todo-unfinished {
+    width: 440px;
+  }
+  .v-todo-completed button, .todo-unfinished__btns button {
+    width: 95px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .todo-list-main {
+    width: 768px;
+    margin: 0 auto;
+  }
+  input {
+    width: 600px;
+  }
+  button {
+    width: 600px;
+  }
+  .add-task__btn {
+    width: 600px;
+  }
+  .todo-list__normal {
+    width: 600px;
+  }
+  .todo-list-item__btns button {
+    width: 150px;
+  }
+  .todo-list__compeleted-tasks, .todo-list__unfinished-tasks {
+    position: static;
+    display: block;
+  }
+  .v-todo-completed, .todo-unfinished {
+    width: 600px;
+  }
+  .v-todo-completed button, .todo-unfinished__btns button {
+    width: 200px;
+  }
 }

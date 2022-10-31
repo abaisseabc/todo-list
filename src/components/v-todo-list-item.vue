@@ -1,6 +1,7 @@
 <template>
   <div class="todo-list-item">
     <p>{{data_post.post}}</p>
+    <p class="date_paragraph">{{data_post.date}}</p>
     <div class="todo-list-item__btns">
       <vDeleteVue
           @deletePost="deletePost"
